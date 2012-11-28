@@ -1,3 +1,5 @@
+require 'snipcheat/snippet_dir'
+
 module Snipcheat
   class Task < Thor
     include Thor::Actions
@@ -8,9 +10,7 @@ module Snipcheat
     desc "generate", "Generate a cheat sheet file given --dir and -out"
     def generate
       vsay "Looking for snippets in #{options[:dir]}"
-      snippets = Dir.new(options[:dir]).select{ |x|
-        x.end_with? '.sublime-snippet'
-      }.compact
+      snippets = SnippetDir.new(options[:dir])
       if snippets.empty?
         say "No snippets found in #{options[:dir]}"
         return
