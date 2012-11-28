@@ -11,7 +11,7 @@ module Snipcheat
     end
 
     def snippets
-      snippet_filenames.map{ |fn| Snippet.new(File.join(@path, fn)) }
+      @_snippets ||= snippet_filenames.map{ |fn| Snippet.new(File.join(@path, fn)) }
     end
 
     def snippet_filenames
