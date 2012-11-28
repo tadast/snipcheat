@@ -15,7 +15,7 @@ module Snipcheat
         say "No snippets found in #{options[:dir]}"
         return
       else
-        vsay "Found: #{snippets.join(', ')}"
+        vsay "Found: #{snippets.filenames.join(', ')}"
       end
     end
 

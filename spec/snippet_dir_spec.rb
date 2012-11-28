@@ -21,13 +21,13 @@ module Snipcheat
       end
     end
 
-    describe "#snippet_filenames" do
+    describe "#filenames" do
       it "finds sample snippet" do
-        fixtures_dir.snippet_filenames.should include('sample.sublime-snippet')
+        fixtures_dir.filenames.should include('sample.sublime-snippet')
       end
 
       it "does not include no snippet" do
-        fixtures_dir.snippet_filenames.should_not include('no.snippet')
+        fixtures_dir.filenames.should_not include('no.snippet')
       end
     end
   end

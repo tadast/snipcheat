@@ -7,15 +7,15 @@ module Snipcheat
     end
 
     def empty?
-      snippet_filenames.empty?
+      filenames.empty?
     end
 
     def snippets
-      @_snippets ||= snippet_filenames.map{ |fn| Snippet.new(File.join(@path, fn)) }
+      @_snippets ||= filenames.map{ |fn| Snippet.new(File.join(@path, fn)) }
     end
 
-    def snippet_filenames
-      @_snippet_filenames ||= Dir.new(@path).select{ |x|
+    def filenames
+      @_filenames ||= Dir.new(@path).select{ |x|
         x.end_with? '.sublime-snippet'
       }.compact
     end
