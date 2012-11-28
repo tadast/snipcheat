@@ -15,6 +15,12 @@ module Snipcheat
       end
     end
 
+    describe "#snippets" do
+      it "is an array of Snippets" do
+        fixtures_dir.snippets.first.should be_a Snippet
+      end
+    end
+
     describe "#snippet_filenames" do
       it "finds sample snippet" do
         fixtures_dir.snippet_filenames.should include('sample.sublime-snippet')
