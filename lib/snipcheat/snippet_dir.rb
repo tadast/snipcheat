@@ -1,3 +1,5 @@
+require 'snipcheat/snippet'
+
 module Snipcheat
   class SnippetDir
     def initialize(path)
@@ -6,6 +8,10 @@ module Snipcheat
 
     def empty?
       snippet_filenames.empty?
+    end
+
+    def snippets
+      snippet_filenames.map{ |fn| Snippet.new(File.join(@path, fn)) }
     end
 
     def snippet_filenames
