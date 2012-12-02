@@ -3,16 +3,19 @@
   %style
     = css
 %body
-  %aside
-    %h2 Scopes
-    %ul
+  %nav
+    %h2.hpadded Scopes
+    %ul.scope_links
       - snippets.map(&:scope).uniq.sort.each do |group|
         %li
           %a{href: "##{group.gsub(/\W/, '_')}"}= group
+    %small.padded
+      Generated with
+      %a{href: "https://github.com/tadast/snipcheat"} Snipcheat
 
   - snippets.group_by(&:scope).sort_by{ |k,_| k }.each do |scope, snippets|
     %section
-      %h2{id: scope.gsub(/\W/, '_') }= scope
+      %h2.hpadded{id: scope.gsub(/\W/, '_') }= scope
       %table.snippets
         %tr
           %th Tab trigger
@@ -21,4 +24,6 @@
           %tr{title: snippet.content}
             %td= snippet.tab_trigger
             %td= snippet.description
+
+
 

@@ -320,16 +320,38 @@ body{
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   width: 1152px;
 }
-aside{
+.padded{
+  padding: 1em;
+}
+.hpadded{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+nav{
   position: fixed;
   left: 0;
-  top: 20px;
+  top: 0;
   width: 252px;
-  max-height: 95%;
+  max-height: 100%;
+  overflow: hidden;
   overflow-y: scroll;
 }
 section{
   float: left;
   margin-left: 272px;
   width: 880px;
+}
+.scope_links{
+  list-style: none;
+  padding: 0;
+}
+.scope_links li a{
+  display: block;
+  padding: 8px;
+}
+.scope_links li:nth-child(odd) a{
+  background: #e8edff;
+}
+.scope_links li a:hover{
+  background: #fffbc3;
 }
