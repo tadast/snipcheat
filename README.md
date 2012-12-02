@@ -1,6 +1,6 @@
 # Snipcheat
 
-Snipcheat takes a directory with sublime snippets and generates you a cheatsheet file.
+Snipcheat takes a directory with sublime snippets and generates you a cheatsheet file. Take a look at [an example cheatsheet](http://tadast.github.com/sublime-rails-snippets) for [Rails](https://github.com/tadast/sublime-rails-snippets) bundle.
 
 ## Installation
 
