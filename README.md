@@ -1,26 +1,24 @@
 # Snipcheat
 
-TODO: Write a gem description
+Snipcheat takes a directory with sublime snippets and generates you a cheatsheet file.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'snipcheat'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install snipcheat
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ snipcheat generate -d Packages/Rails -o ~/rails_cheatsheet.html
 
 ## Contributing
+
+Contributions are very welcome. Please consider the list of things that could improve the gem:
+
+* Better/more CSS styles for output
+* Live search
+* Ability to generate a website with nested lists of cheatsheets
+
+### How to contribute
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
