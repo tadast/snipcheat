@@ -1,0 +1,16 @@
+!!!
+%head
+%body
+  %table
+    %tr
+      %th Description
+      %th Tab trigger
+      %th Scope
+      %th Content
+    - snippets.each do |snippet|
+      %tr
+        %td= snippet.description
+        %td= snippet.tab_trigger
+        %td= snippet.scope
+        %td= snippet.content
+

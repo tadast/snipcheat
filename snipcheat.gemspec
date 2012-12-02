@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'crack'
   gem.add_dependency 'thor'
+  gem.add_dependency 'haml'
 
   gem.add_development_dependency 'rspec'
 end
