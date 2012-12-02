@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["tadas@pdfcv.com"]
   gem.description   = %q{Generate a cheatsheet HTML given a directory with Sublime Text snippets}
   gem.summary       = %q{Sublime Text 2 snippet cheat-sheet generator}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/tadast/snipcheat"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

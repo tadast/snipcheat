@@ -1,16 +1,24 @@
 !!!
 %head
+  %style
+    = css
 %body
-  %table
-    %tr
-      %th Description
-      %th Tab trigger
-      %th Scope
-      %th Content
-    - snippets.each do |snippet|
-      %tr
-        %td= snippet.description
-        %td= snippet.tab_trigger
-        %td= snippet.scope
-        %td= snippet.content
+  %aside
+    %h2 Scopes
+    %ul
+      - snippets.map(&:scope).uniq.sort.each do |group|
+        %li
+          %a{href: "##{group.gsub(/\W/, '_')}"}= group
+
+  - snippets.group_by(&:scope).sort_by{ |k,_| k }.each do |scope, snippets|
+    %section
+      %h2{id: scope.gsub(/\W/, '_') }= scope
+      %table.snippets
+        %tr
+          %th Tab trigger
+          %th Description
+        - snippets.sort_by(&:tab_trigger).each do |snippet|
+          %tr{title: snippet.content}
+            %td= snippet.tab_trigger
+            %td= snippet.description
 

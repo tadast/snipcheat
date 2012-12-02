@@ -14,13 +14,20 @@ module Snipcheat
     end
 
     def to_s
-      engine = Haml::Engine.new(template_string)
-      out = engine.render(Object.new, snippets: @snippets)
+      engine = Haml::Engine.new(template)
+      out = engine.render(Object.new, snippets: @snippets, css: css)
     end
 
   private
 
-    def template_string
+    def css
+      f = File.open(File.join(File.dirname(__FILE__), '..', 'templates', 'styles.css'))
+      f.read
+    ensure
+      f.close
+    end
+
+    def template
       f = File.open(File.join(File.dirname(__FILE__), '..', 'templates', 'simple.html.haml'))
       f.read
     ensure
