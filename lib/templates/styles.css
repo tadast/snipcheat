@@ -348,6 +348,9 @@ section{
 .scope_links li a{
   display: block;
   padding: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .scope_links li:nth-child(odd) a{
   background: #e8edff;

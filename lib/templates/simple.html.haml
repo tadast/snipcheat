@@ -9,7 +9,7 @@
     %h2.hpadded Scopes
     %ul.scope_links
       - snippets.map(&:scope).uniq.sort.each do |group|
-        %li
+        %li{title: group}
           %a{href: "##{group.gsub(/\W/, '_')}"}= group
     %small.padded
       Generated with
