@@ -12,6 +12,14 @@ module Snipcheat
         out.should match 'magic'
         out.should match 'all.files'
       end
+
+      it "escapes html" do
+        snippets = [double(content: '<trololo>', tab_trigger: 'ttr', description: '<trololo>', scope: 'all.files')]
+        out = Output.new(snippets, :path).to_s
+
+        out.should match '&lt;trololo&gt;'
+        out.should_not match '<trololo>'
+      end
     end
   end
 end

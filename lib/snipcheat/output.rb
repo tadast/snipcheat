@@ -8,14 +8,14 @@ module Snipcheat
     end
 
     def write
-      f = File.open(@out_file, 'w') do |f|
+      File.open(@out_file, 'w') do |f|
         f.write(to_s)
       end
     end
 
     def to_s
-      engine = Haml::Engine.new(template)
-      out = engine.render(Object.new, snippets: @snippets, css: css)
+      engine = Haml::Engine.new(template, escape_html: true)
+      engine.render(Object.new, snippets: @snippets, css: css)
     end
 
   private
