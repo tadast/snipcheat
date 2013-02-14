@@ -3,7 +3,7 @@
 Snipcheat takes a directory with sublime snippets and generates you a cheatsheet file. Take a look at [an example cheatsheet](http://tadast.github.com/sublime-rails-snippets) for [Rails](https://github.com/tadast/sublime-rails-snippets) bundle.
 
 [![Build Status](https://travis-ci.org/tadast/snipcheat.png?branch=master)](https://travis-ci.org/tadast/snipcheat)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/tadast/snipcheat)
+[![Code Climate](https://codeclimate.com/github/tadast/snipcheat.png)](https://codeclimate.com/github/tadast/snipcheat)
 
 ## Installation
 
