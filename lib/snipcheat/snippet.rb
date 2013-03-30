@@ -1,4 +1,6 @@
-require 'crack/xml'
+require 'rexml/document'
+require 'crack/xml' # Tmp fix https://github.com/jnunemaker/crack/pull/42
+
 module Snipcheat
   class Snippet
     attr_reader :scope, :content, :description, :tab_trigger
